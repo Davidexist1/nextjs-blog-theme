@@ -27,7 +27,7 @@ export default function Layout({ children }) {
     return;
   };
 
-  const handleSystemThemeChange = () => {
+  function handleSystemThemeChange() {
     var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
     darkQuery.onchange = (e) => {
@@ -39,7 +39,7 @@ export default function Layout({ children }) {
         localStorage.setItem('theme', 'light');
       }
     };
-  };
+  }
 
   useEffect(() => {
     setAppTheme();
